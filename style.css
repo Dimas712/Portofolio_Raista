@@ -1,8 +1,21 @@
-.jumbotron {
-  padding-top: 100px;
-  background-color: #1a406d;
-  color: #2c3e50;
+:root {
+  --black-main: #0f172a;     /* hitam kebiruan (elegan) */
+  --black-soft: #1e293b;     /* hitam lembut */
+  --blue-main: #5A7FB0;
+  --blue-dark: #1a406d;
+  --white-soft: #f8fafc;
 }
+
+.jumbotron {
+  padding-top: 120px;
+  background: linear-gradient(
+    135deg,
+    var(--black-main),
+    var(--blue-dark)
+  );
+  color: var(--white-soft);
+}
+
 @keyframes moveWave {
   0% {
     d: path(
@@ -21,12 +34,34 @@
   }
 }
 
+footer {
+  background-color: #020617 !important;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
 svg path {
   animation: moveWave 10s ease-in-out infinite;
 }
 
-#projects{
-  background-color: #5A7FB0;
+
+#projects {
+  background: linear-gradient(
+    to bottom,
+    #1e293b,
+    #020617
+  );
+  border-radius: 40px 40px 0 0;   /* 🔥 sudut atas melengkung */
+  margin-top: 40px;
+  padding-top: 60px;
+  position: relative;
+}
+#projects::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 40px 40px 0 0;
+  box-shadow: inset 0 15px 30px rgba(255, 255, 255, 0.05);
+  pointer-events: none;
 }
 
 section{
@@ -63,16 +98,16 @@ section{
 }
 
 .list-group-item i {
-  color: #5A7FB0;
+  color: var(--blue-main);
 }
 
 .data-border {
-  border: 2px dashed #5A7FB0;
+  border: 2px dashed var(--blue-main);
   border-radius: 14px;
   padding: 20px;
   max-width: 720px;
   margin: 24px auto;
-  background-color: rgba(255, 255, 255, 0.9);
+  background-color: rgba(255, 255, 255, 0.95);
 }
 
 /* Efek halus saat hover */
@@ -99,72 +134,45 @@ section{
   }
 }
 
-/* Navbar cantik */
 .custom-navbar {
-  background: linear-gradient(135deg, #5A7FB0, #6f95c8);
-  box-shadow: 0 6px 20px rgba(90, 127, 176, 0.35);
-  transition: 0.3s ease;
-}
-
-.custom-navbar .navbar-brand {
-  font-size: 1.2rem;
-  letter-spacing: 0.5px;
+  background: linear-gradient(
+    135deg,
+    #020617,
+    var(--black-soft)
+  );
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.6);
 }
 
 .custom-navbar .nav-link {
-  color: #ffffff !important;
-  font-weight: 500;
-  padding: 8px 14px;
-  border-radius: 20px;
-  transition: all 0.3s ease;
+  color: #e5e7eb !important;
 }
 
 .custom-navbar .nav-link:hover {
-  background-color: rgba(255, 255, 255, 0.2);
+  background-color: rgba(90, 127, 176, 0.25);
 }
 
 .custom-navbar .nav-link.active {
-  background-color: rgba(255, 255, 255, 0.3);
-  font-weight: 600;
+  background-color: rgba(90, 127, 176, 0.35);
 }
 
 /* Card musik lebih kecil & rapi */
 .music-card {
-  border-radius: 12px;
-  overflow: hidden;
-  max-width: 260px;       /* 🔹 bikin card lebih kecil */
-  margin: auto;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.music-card img {
-  height: 180px;          /* 🔹 perkecil cover */
-  object-fit: cover;
-}
-
-.music-card .card-body {
-  padding: 12px;          /* 🔹 padding lebih hemat */
+  background-color: #020617;
+  color: #e5e7eb;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 18px;
 }
 
 .music-card .card-title {
-  font-size: 1rem;        /* 🔹 judul lebih kecil */
-  font-weight: 600;
-  margin-bottom: 4px;
+  color: #ffffff;
 }
 
 .music-card .card-text {
-  font-size: 0.9rem;      /* 🔹 nama penyanyi */
-  margin-bottom: 8px;
-}
-
-.music-card .btn {
-  font-size: 0.8rem;      /* 🔹 tombol lebih kecil */
-  padding: 5px 10px;
+  color: #cbd5f5;
 }
 
 .music-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 12px 30px rgba(90, 127, 176, 0.35);
 }
 
 .profile-img {
@@ -201,6 +209,7 @@ section{
   font-size: 24px;
   animation: fall linear infinite;
   opacity: 0.8;
+  filter: drop-shadow(0 0 6px rgba(255,255,255,0.4));
 }
 
 /* posisi & kecepatan acak */
@@ -226,10 +235,11 @@ section{
   background-size: 300px;
   background-repeat: repeat;
   background-opacity: 0.05;
+  background-color: #020617;
 }
 
 .about-box {
-  background: rgba(255, 255, 255, 0.88); /* putih transparan */
+  background: rgba(255, 255, 255, 0.9);
   padding: 30px 35px;
   border-radius: 20px;
   max-width: 900px;
