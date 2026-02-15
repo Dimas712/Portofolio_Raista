@@ -1,0 +1,262 @@
+.jumbotron {
+  padding-top: 100px;
+  background-color: #1a406d;
+  color: #2c3e50;
+}
+@keyframes moveWave {
+  0% {
+    d: path(
+      "M0,32L34.3,37.3C68.6,43,137,53,206,80C274.3,107,343,149,411,154.7C480,160,549,128,617,106.7C685.7,85,754,75,823,90.7C891.4,107,960,149,1029,181.3C1097.1,213,1166,235,1234,224C1302.9,213,1371,171,1406,149.3L1440,128L1440,320L1405.7,320C1371.4,320,1303,320,1234,320C1165.7,320,1097,320,1029,320C960,320,891,320,823,320C754.3,320,686,320,617,320C548.6,320,480,320,411,320C342.9,320,274,320,206,320C137.1,320,69,320,34,320L0,320Z"
+    );
+  }
+  50% {
+    d: path(
+      "M0,64L34.3,74.7C68.6,85,137,107,206,128C274.3,149,343,171,411,176C480,181,549,171,617,160C685.7,149,754,139,823,144C891.4,149,960,171,1029,186.7C1097.1,203,1166,213,1234,197.3C1302.9,181,1371,139,1406,117.3L1440,96L1440,320L1405.7,320C1371.4,320,1303,320,1234,320C1165.7,320,1097,320,1029,320C960,320,891,320,823,320C754.3,320,686,320,617,320C548.6,320,480,320,411,320C342.9,320,274,320,206,320C137.1,320,69,320,34,320L0,320Z"
+    );
+  }
+  100% {
+    d: path(
+      "M0,32L34.3,37.3C68.6,43,137,53,206,80C274.3,107,343,149,411,154.7C480,160,549,128,617,106.7C685.7,85,754,75,823,90.7C891.4,107,960,149,1029,181.3C1097.1,213,1166,235,1234,224C1302.9,213,1371,171,1406,149.3L1440,128L1440,320L1405.7,320C1371.4,320,1303,320,1234,320C1165.7,320,1097,320,1029,320C960,320,891,320,823,320C754.3,320,686,320,617,320C548.6,320,480,320,411,320C342.9,320,274,320,206,320C137.1,320,69,320,34,320L0,320Z"
+    );
+  }
+}
+
+svg path {
+  animation: moveWave 10s ease-in-out infinite;
+}
+
+#projects{
+  background-color: #5A7FB0;
+}
+
+section{
+  padding-top: 2rem;
+}
+
+.card-img-top {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.about-us h1:after{
+	content: "";
+	position: absolute;
+	width: 100%;
+	height: 4px;
+	display: block;
+	margin: 0 auto;
+	background-color: #2ecc71;
+}
+
+.card img{
+  transition: 1s;
+}
+
+.card img:hover{
+  transform: scale(1.1);
+}
+
+.list-group-item {
+  background-color: transparent;
+  border: none;
+}
+
+.list-group-item i {
+  color: #5A7FB0;
+}
+
+.data-border {
+  border: 2px dashed #5A7FB0;
+  border-radius: 14px;
+  padding: 20px;
+  max-width: 720px;
+  margin: 24px auto;
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+/* Efek halus saat hover */
+.data-border:hover {
+  box-shadow: 0 12px 30px rgba(90, 127, 176, 0.25);
+  transition: 0.3s ease;
+}
+
+@media (max-width: 576px) {
+  .data-border {
+    max-width: 92%;
+    padding: 16px 14px;
+    margin: 16px auto;
+    border-radius: 12px;
+  }
+
+  .data-border h2 {
+    font-size: 1.1rem;
+  }
+
+  .data-border li,
+  .data-border p {
+    font-size: 0.9rem;
+  }
+}
+
+/* Navbar cantik */
+.custom-navbar {
+  background: linear-gradient(135deg, #5A7FB0, #6f95c8);
+  box-shadow: 0 6px 20px rgba(90, 127, 176, 0.35);
+  transition: 0.3s ease;
+}
+
+.custom-navbar .navbar-brand {
+  font-size: 1.2rem;
+  letter-spacing: 0.5px;
+}
+
+.custom-navbar .nav-link {
+  color: #ffffff !important;
+  font-weight: 500;
+  padding: 8px 14px;
+  border-radius: 20px;
+  transition: all 0.3s ease;
+}
+
+.custom-navbar .nav-link:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.custom-navbar .nav-link.active {
+  background-color: rgba(255, 255, 255, 0.3);
+  font-weight: 600;
+}
+
+/* Card musik lebih kecil & rapi */
+.music-card {
+  border-radius: 12px;
+  overflow: hidden;
+  max-width: 260px;       /* 🔹 bikin card lebih kecil */
+  margin: auto;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.music-card img {
+  height: 180px;          /* 🔹 perkecil cover */
+  object-fit: cover;
+}
+
+.music-card .card-body {
+  padding: 12px;          /* 🔹 padding lebih hemat */
+}
+
+.music-card .card-title {
+  font-size: 1rem;        /* 🔹 judul lebih kecil */
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.music-card .card-text {
+  font-size: 0.9rem;      /* 🔹 nama penyanyi */
+  margin-bottom: 8px;
+}
+
+.music-card .btn {
+  font-size: 0.8rem;      /* 🔹 tombol lebih kecil */
+  padding: 5px 10px;
+}
+
+.music-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.profile-img {
+  width: 200px;
+  height: 200px;
+  margin: 0 auto 20px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 5px solid rgba(255, 255, 255, 0.7); /* opsional biar elegan */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+}
+
+.profile-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* ini kunci biar wajah pas */
+}
+
+/* 🌸 Flower Drop Effect */
+.flowers {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none; /* biar gak ganggu klik */
+  overflow: hidden;
+  z-index: 1;
+}
+
+.flowers span {
+  position: absolute;
+  top: -10%;
+  font-size: 24px;
+  animation: fall linear infinite;
+  opacity: 0.8;
+}
+
+/* posisi & kecepatan acak */
+.flowers span:nth-child(1) { left: 10%; animation-duration: 10s; }
+.flowers span:nth-child(2) { left: 25%; animation-duration: 12s; }
+.flowers span:nth-child(3) { left: 40%; animation-duration: 9s; }
+.flowers span:nth-child(4) { left: 55%; animation-duration: 14s; }
+.flowers span:nth-child(5) { left: 70%; animation-duration: 11s; }
+.flowers span:nth-child(6) { left: 85%; animation-duration: 13s; }
+.flowers span:nth-child(7) { left: 95%; animation-duration: 15s; }
+
+@keyframes fall {
+  0% {
+    transform: translateY(0) rotate(0deg);
+  }
+  100% {
+    transform: translateY(110vh) rotate(360deg);
+  }
+}
+
+#about {
+  background-image: url("img/sakura.png");
+  background-size: 300px;
+  background-repeat: repeat;
+  background-opacity: 0.05;
+}
+
+.about-box {
+  background: rgba(255, 255, 255, 0.88); /* putih transparan */
+  padding: 30px 35px;
+  border-radius: 20px;
+  max-width: 900px;
+  margin: auto;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+}
+
+/* Judul */
+.about-box h2 {
+  color: #1a406d;
+  font-weight: 700;
+}
+
+/* Teks */
+.about-box p {
+  color: #2c3e50;
+  line-height: 1.8;
+}
+
+/* Versi HP */
+@media (max-width: 768px) {
+  .about-box {
+    padding: 22px 18px;
+    border-radius: 16px;
+  }
+
+  .about-box p {
+    font-size: 0.95rem;
+  }
+}
